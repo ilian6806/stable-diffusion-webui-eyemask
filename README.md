@@ -41,7 +41,7 @@ All requirements will be installed on first use, except for:
 
 ### Examples
 
-<img width="1024" src="https://github.com/ilian6806/stable-diffusion-webui-eyemask/raw/static/images/mask-types.jpg" alt="">
+<img width="1024" src="https://raw.githubusercontent.com/ilian6806/stable-diffusion-webui-eyemask/master/static/images/mask-types.jpg" alt="">
 
 ### Contributing
 
