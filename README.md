@@ -1,8 +1,10 @@
-<img alt="" src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
-<img alt="" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-<img alt="" src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" />
+<p float="left">
+    <img alt="" src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+    <img alt="" src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+    <img alt="" src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" />
+</p>
 
-# eyemask
+# stable-diffusion-webui-eyemask
 
 This extension is for AUTOMATIC1111's [Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
@@ -39,7 +41,7 @@ All requirements will be installed on first use, except for:
 
 ### Examples
 
-<img width="1024" src="https://bitbucket.imperiaonline.org/projects/OPAI/repos/eyemask/raw/static/images/mask-types.jpg" alt="">
+<img width="1024" src="https://github.com/ilian6806/stable-diffusion-webui-eyemask/raw/static/images/mask-types.jpg" alt="">
 
 ### Contributing
 
