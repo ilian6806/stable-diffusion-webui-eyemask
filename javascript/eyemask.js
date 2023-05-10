@@ -8,12 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         timeOut: 3500
     };
 
-    window.gradioRoot = gradioApp().querySelector('.gradio-container');
-    window.$gradioRoot = $(window.gradioRoot);
-
     onUiLoaded(EyeMaskController.load);
-
-    $gradioRoot.append('<div id="dialogs-container"></div>')
 });
 
 
@@ -40,6 +35,12 @@ const EyeMaskController = (function () {
 
     function getApiUrl(path) {
         return '/sdapi/v1/eyemask/v1' + path;
+    }
+
+    function initRoot() {
+        window.gradioRoot = gradioApp().querySelector('.gradio-container');
+        window.$gradioRoot = $(window.gradioRoot);
+        $gradioRoot.append('<div id="dialogs-container"></div>');
     }
 
     function loadTitles() {
@@ -176,6 +177,7 @@ const EyeMaskController = (function () {
 
     function onFirstLoad() {
         getConfig();
+        initRoot();
         loadTitles();
         loadPlaceHolders();
     }
@@ -187,6 +189,7 @@ const EyeMaskController = (function () {
 
     function showInfo() {
         dialog.image('mask-types.jpg', 'Mask Types', null, '80%');
+        return true;
     }
 
     return {

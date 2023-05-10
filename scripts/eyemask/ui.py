@@ -97,9 +97,9 @@ class EyeMaskUI():
                 value=self.eye_mask_core.MASK_TYPES[0],
                 type="index"
             )
-            em_info = ToolButton(value="\u2139\uFE0F", elem_id="eye-info-button", full_width=False)
+            em_info = ToolButton(value="\u2139\uFE0F", elem_id=get_id("eye-info-button"), full_width=False)
             em_info.click(
-                fn=lambda: '',
+                fn=lambda: True,
                 _js="() => EyeMaskController.showInfo()",
                 show_progress=False
             )

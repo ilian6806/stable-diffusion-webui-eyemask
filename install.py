@@ -37,8 +37,8 @@ def list_models(model_path):
 
 python = sys.executable
 
-run(f'"{python}" -m pip install lightning-utilities==0.4.0', desc=f"Installing lightning-utilities", errdesc=f"Couldn't install lightning-utilities")
-run(f'"{python}" -m pip install pytorch-lightning==1.7.6', desc=f"Installing pytorch-lightning", errdesc=f"Couldn't install pytorch-lightning")
+run(f'"{python}" -m pip install lightning-utilities==0.4.0', desc=None, errdesc=f"Couldn't install lightning-utilities")
+run(f'"{python}" -m pip install pytorch-lightning==1.7.6', desc=None, errdesc=f"Couldn't install pytorch-lightning")
 
 if not is_installed("dlib"):
     run(f'"{python}" -m pip install setuptools', desc="Installing setuptools", errdesc="Couldn't install setuptools")
