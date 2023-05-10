@@ -1,0 +1,24 @@
+
+@include select('eye-mask-container', (
+    '.gr-button-tool': (
+        margin: 0.55em
+    )
+));
+
+@include select('negative-prompt', (
+    margin-bottom: 15px
+));
+
+@include select('mask-model', (
+    margin-top: 10px
+));
+
+@include select('mask-type-row', (
+    margin-bottom: 20px,
+    padding: 0 12px,
+    font-size: 12px
+));
+
+@include select('reload-extension', (
+    margin: 10px 12px 0 12px
+));

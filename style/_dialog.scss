@@ -1,0 +1,103 @@
+
+/***** Dialog styles *****/
+
+#dialogs-container {
+    position: relative;
+    height: 0;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+#dialogs-container.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(41, 111, 180, 0.3);
+}
+
+#dialogs-container > div.modal {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    margin: auto;
+    color: #000;
+    border-radius: 8px;
+    border: 1px solid #b1dde4;
+    background-color: rgba(241, 248, 255, 1);
+    box-shadow: 0 0 35px 3px rgba(41, 111, 180, 0.5);
+    overflow: hidden;
+    z-index: 2000;
+}
+
+#dialogs-container > div.modal.modal-big {
+    font-size: 14px;
+    max-width: 700px;
+    width: 95%;
+    top: 10%;
+}
+
+#dialogs-container > div.modal.modal-big .modal-content {
+    max-height: 350px;
+}
+
+#dialogs-container > div.modal.modal-big .modal-footer button {
+    min-width: 150px;
+}
+
+#dialogs-container .modal-header, #dialogs-container .modal-footer {
+    text-align: center;
+}
+
+#dialogs-container .modal-header {
+    padding: 10px 10px;
+}
+
+#dialogs-container .modal-header h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#dialogs-container .modal-footer {
+    padding: 5px 10px;
+}
+
+#dialogs-container .modal-footer button {
+    min-width: 40%;
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin: 5px 7px;
+    background: #296fb4;
+    transition: all 0.2s linear;
+    color: white;
+}
+
+#dialogs-container .modal-footer button.danger {
+    background: #df4c73;
+}
+
+#dialogs-container .modal-content {
+    border-top: 1px solid #b1dde4;
+    border-bottom: 1px solid #b1dde4;
+    padding: 20px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+#dialogs-container .modal-content a.simple-link {
+    color: #296fb4;
+}
+
+#dialogs-container .modal-content::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}

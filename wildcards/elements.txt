@@ -1,0 +1,14 @@
+Earth
+Water
+Wind
+Fire
+Thunder
+Ice
+Force
+Time
+Flower
+Shadow
+Light
+Darkness
+Metal
+Moon

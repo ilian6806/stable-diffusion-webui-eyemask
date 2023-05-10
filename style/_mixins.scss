@@ -1,0 +1,30 @@
+
+@mixin select($id, $rules) {
+
+    $selectors: (
+        '#em-#{ $id }-txt2img',
+        '#em-#{ $id }-img2img',
+        '#em-emb-#{ $id }-txt2img',
+        '#em-emb-#{ $id }-img2img'
+    );
+
+    $selector-string: '';
+
+    @each $selector in $selectors {
+        $selector-string: #{$selector-string}#{$selector}', ' ;
+    }
+
+    #{ $selector-string } {
+        @each $property, $value in $rules {
+            @if type-of($value) == map {
+                #{ $property } {
+                    @each $subproperty, $subvalue in $value {
+                        #{ $subproperty }: $subvalue;
+                    }
+                }
+            } @else {
+                #{ $property }: $value;
+            }
+        }
+    }
+}
