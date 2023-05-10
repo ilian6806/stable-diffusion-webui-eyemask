@@ -35,18 +35,19 @@ def list_models(model_path):
 
     return models
 
-print('Installing requirements for eyemask')
+python = sys.executable
+
+run(f'"{python}" -m pip install lightning-utilities==0.4.0', desc=f"Installing lightning-utilities", errdesc=f"Couldn't install lightning-utilities")
+run(f'"{python}" -m pip install pytorch-lightning==1.7.6', desc=f"Installing pytorch-lightning", errdesc=f"Couldn't install pytorch-lightning")
 
 if not is_installed("dlib"):
-    python = sys.executable
     run(f'"{python}" -m pip install setuptools', desc="Installing setuptools", errdesc="Couldn't install setuptools")
     run(f'"{python}" -m pip install dlib', desc="Installing dlib", errdesc="Couldn't install dlib")
 
 if not is_installed("mmdet"):
-    python = sys.executable
-    run(f'"{python}" -m pip install -U openmim', desc="Installing openmim", errdesc="Couldn't install openmim")
-    run(f'"{python}" -m mim install mmcv-full', desc=f"Installing mmcv-full", errdesc=f"Couldn't install mmcv-full")
-    run(f'"{python}" -m pip install mmdet', desc=f"Installing mmdet", errdesc=f"Couldn't install mmdet")
+    run(f'"{python}" -m pip install openmim==0.3.5', desc="Installing openmim", errdesc="Couldn't install openmim")
+    run(f'"{python}" -m mim install mmcv-full==1.7.1', desc=f"Installing mmcv-full", errdesc=f"Couldn't install mmcv-full")
+    run(f'"{python}" -m pip install mmdet==2.27.0', desc=f"Installing mmdet", errdesc=f"Couldn't install mmdet")
 
 if (len(list_models(dd_models_path)) == 0):
     print("No detection models found, downloading...")
