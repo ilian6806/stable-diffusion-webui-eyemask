@@ -75,6 +75,15 @@ const EyeMaskController = (function () {
         return result;
     }
 
+    function getSelector(selector) {
+        return (`
+            #em-${selector}-txt2img, 
+            #em-${selector}-img2img,
+            #em-emb-${selector}-txt2img,
+            #em-emb-${selector}-img2img
+        `);
+    }
+
     function loadPlaceHolders() {
         if (config.em_save_prompts) {
             ['txt2img_prompt', 'img2img_prompt'].forEach(handleSavedInput);
@@ -175,11 +184,18 @@ const EyeMaskController = (function () {
         }
     }
 
+    function bindEvents() {
+        $(gradioApp()).on('click', getSelector('eye-info-button'), function () {
+            dialog.image('mask-types.jpg', 'Mask Types', null, '80%');
+        });
+    }
+
     function onFirstLoad() {
         getConfig();
         initRoot();
         loadTitles();
         loadPlaceHolders();
+        bindEvents();
     }
 
     function load() {
@@ -187,13 +203,7 @@ const EyeMaskController = (function () {
         onFirstLoad();
     }
 
-    function showInfo() {
-        dialog.image('mask-types.jpg', 'Mask Types', null, '80%');
-        return true;
-    }
-
     return {
-        load,
-        showInfo
+        load
     };
 }());

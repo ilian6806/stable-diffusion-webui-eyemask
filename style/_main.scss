@@ -22,3 +22,7 @@
 @include select('reload-extension', (
     margin: 10px 12px 0 12px
 ));
+
+@include select('prompt', (
+    margin: 10px 0
+));

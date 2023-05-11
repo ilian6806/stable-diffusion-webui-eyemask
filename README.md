@@ -27,8 +27,19 @@ Use *Install from URL* option with this repo url.
 
 ### Requirements
 
+- openmim==0.3.5
+- mmcv-full==1.7.1
+- mmdet==2.27.0
+- lightning-utilities==0.4.0
+- pytorch-lightning==1.7.6
+- setuptools
+- dlib
+
 All requirements will be installed on first use, except for:
  - [cmake](https://cmake.org/download/) - used only for dlib masks
+
+**NOTE:** Some of these packages are incompatible with newer versions of **lightning-utilities** and **pytorch-lightning**. If some other extensions you use require newer versions, they will be incompatible with this extension.
+
 
 ### Mask types
 
