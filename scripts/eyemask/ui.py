@@ -98,11 +98,6 @@ class EyeMaskUI():
                 type="index"
             )
             em_info = ToolButton(value="\u2139\uFE0F", elem_id=get_id("eye-info-button"), full_width=False)
-            em_info.click(
-                fn=lambda: True,
-                _js="() => EyeMaskController.showInfo()",
-                show_progress=False
-            )
         with gr.Row(elem_id=get_id("mask-type-row")):
             with gr.Accordion("Mask Preview", open=False):
                 with gr.Row():
