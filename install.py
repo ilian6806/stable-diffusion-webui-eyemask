@@ -37,6 +37,7 @@ def list_models(model_path):
 
 python = sys.executable
 
+run(f'"{python}" -m pip install -U openmim', desc=None, errdesc="Couldn't install openmim")
 run(f'"{python}" -m pip install lightning-utilities==0.4.0', desc=None, errdesc=f"Couldn't install lightning-utilities")
 run(f'"{python}" -m pip install pytorch-lightning==1.7.6', desc=None, errdesc=f"Couldn't install pytorch-lightning")
 
@@ -56,7 +57,6 @@ if not is_installed("dlib"):
 
 
 if not is_installed("mmdet"):
-    run(f'"{python}" -m pip install openmim', desc="Installing openmim", errdesc="Couldn't install openmim")
     run(f'"{python}" -m mim install mmcv-full', desc=f"Installing mmcv-full", errdesc=f"Couldn't install mmcv-full")
     run(f'"{python}" -m pip install mmdet==2.27.0', desc=f"Installing mmdet", errdesc=f"Couldn't install mmdet")
 
