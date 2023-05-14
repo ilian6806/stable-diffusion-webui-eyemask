@@ -35,8 +35,7 @@ Use *Install from URL* option with this repo url.
 - dlib==19.24.0
 - setuptools
 
-All requirements will be installed on first use, except for:
- - [cmake](https://cmake.org/download/) - used only for dlib masks
+All requirements will be installed on first use.
 
 **NOTE:** Some of these packages are incompatible with newer versions of **lightning-utilities** and **pytorch-lightning**. If some other extensions you use require newer versions, they will be incompatible with this extension.
 
