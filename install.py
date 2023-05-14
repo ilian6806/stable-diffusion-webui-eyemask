@@ -56,8 +56,8 @@ if not is_installed("dlib"):
 
 
 if not is_installed("mmdet"):
-    run(f'"{python}" -m pip install openmim==0.3.5', desc="Installing openmim", errdesc="Couldn't install openmim")
-    run(f'"{python}" -m mim install mmcv-full==1.7.1', desc=f"Installing mmcv-full", errdesc=f"Couldn't install mmcv-full")
+    run(f'"{python}" -m pip install openmim', desc="Installing openmim", errdesc="Couldn't install openmim")
+    run(f'"{python}" -m mim install mmcv-full', desc=f"Installing mmcv-full", errdesc=f"Couldn't install mmcv-full")
     run(f'"{python}" -m pip install mmdet==2.27.0', desc=f"Installing mmdet", errdesc=f"Couldn't install mmdet")
 
 if (len(list_models(dd_models_path)) == 0):
