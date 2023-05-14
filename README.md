@@ -34,6 +34,7 @@ Use *Install from URL* option with this repo url.
 - pytorch-lightning==1.7.6
 - dlib==19.24.0
 - setuptools
+- cmake
 
 All requirements will be installed on first use.
 
