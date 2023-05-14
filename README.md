@@ -32,8 +32,8 @@ Use *Install from URL* option with this repo url.
 - mmdet==2.27.0
 - lightning-utilities==0.4.0
 - pytorch-lightning==1.7.6
+- dlib==19.24.0
 - setuptools
-- dlib
 
 All requirements will be installed on first use, except for:
  - [cmake](https://cmake.org/download/) - used only for dlib masks
