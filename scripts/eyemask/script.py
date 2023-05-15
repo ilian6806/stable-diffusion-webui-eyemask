@@ -16,8 +16,8 @@ class EyeMasksCore():
         'Face dlib',
         'Face depth',
         'Body depth',
-        'Face mmdet',
-        'Body mmdet'
+        # 'Face mmdet',
+        # 'Body mmdet'
     ]
 
     MASK_TYPE_EYES_DLIB = utils.index(MASK_TYPES, 'Eyes dlib')

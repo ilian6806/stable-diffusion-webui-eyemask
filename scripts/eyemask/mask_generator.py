@@ -7,7 +7,12 @@ import numpy as np
 from PIL import Image, ImageDraw
 from .constants import script_models_dir
 from .utils import expand_polygon, calculate_distance
-from .modules import depthmap, mmdetdd
+from .modules import depthmap
+
+try:
+    from .modules import mmdetdd
+except Exception as e:
+    pass
 
 depthmap_generator = depthmap.SimpleDepthMapGenerator()
 
