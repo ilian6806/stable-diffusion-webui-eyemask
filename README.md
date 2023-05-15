@@ -26,20 +26,11 @@ Put all wildcards files in */wildcards* dir.
 Use *Install from URL* option with this repo url.
 
 ### Requirements
-
-- openmim==0.3.5
-- mmcv-full==1.7.1
-- mmdet==2.27.0
-- lightning-utilities==0.4.0
-- pytorch-lightning==1.7.6
 - dlib==19.24.0
 - setuptools
 - cmake
 
 All requirements will be installed on first use.
-
-**NOTE:** Some of these packages are incompatible with newer versions of **lightning-utilities** and **pytorch-lightning**. If some other extensions you use require newer versions, they will be incompatible with this extension.
-
 
 ### Mask types
 
@@ -47,8 +38,6 @@ All requirements will be installed on first use.
 2. Face dlib
 3. Face depthmask
 4. Body depthmask
-5. Face mmdet
-6. Body mmdet
 
 ### Examples
 
