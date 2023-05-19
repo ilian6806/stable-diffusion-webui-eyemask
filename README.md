@@ -21,6 +21,24 @@ This extension is for AUTOMATIC1111's [Stable Diffusion web UI](https://github.c
 
 Put all wildcards files in */wildcards* dir.
 
+### Usage
+
+Demo video: [https://www.youtube.com/watch?v=Q5PIFd7XsjM](https://www.youtube.com/watch?v=Q5PIFd7XsjM)
+
+* Enable the extension and enter your eye mask prompt
+* Enter your original prompt
+* Select mask type
+* Select a model for mask redraw if you want other model
+* Select mask padding if you want bigger area for redraw
+* Select mask preview if you want to check the mask
+* You can use placeholders in mask prompt and original prompt:
+    - Go to the */extensions/stable-diffusion-webui-eyemask/wildcards* dir and create a text file (for example *my-wildcard.txt*)
+    - Write your wildcards on new lines in this file
+    - Use this wildcard in the mask prompt or original prompt as **\_\_my-wildcard\_\_** and a random line will be used
+    - If you want to use each line in order, the wildcard file name must end with **_each**
+    - You can use multiple wildcards in one prompt
+    - You can use wildcards in the mask prompt and the original prompt at the same time
+
 ### Install
 
 Use *Install from URL* option with this repo url.
