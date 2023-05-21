@@ -209,22 +209,32 @@ class EyeMasksCore():
                         print(e)
                         save_prompt = orig_image_info
 
+                updated_info = self.update_info(initial_info, em_params)
+
                 output_images.append(processed.images[0])
+                p.all_seeds.append(start_seed)
+                p.all_prompts.append(save_prompt)
+                p.infotexts.append(updated_info)
+
                 if em_include_mask and (n == iterations - 1 or (is_txt2img and em_redraw_original)):
                     output_images.append(mask)
+                    p.all_seeds.append(start_seed)
+                    p.all_prompts.append(mask_prompt)
+                    p.infotexts.append(updated_info)
 
                 shared.state.current_image = processed.images[0]
 
-                images.save_image(
-                    processed.images[0],
-                    p.outpath_samples,
-                    "",
-                    start_seed,
-                    save_prompt,
-                    shared.opts.samples_format,
-                    info=self.update_info(initial_info, em_params),
-                    p=p
-                )
+                if shared.opts.samples_save:
+                    images.save_image(
+                        processed.images[0],
+                        p.outpath_samples,
+                        "",
+                        start_seed,
+                        save_prompt,
+                        shared.opts.samples_format,
+                        info=updated_info,
+                        p=p
+                    )
 
         devices.torch_gc()
         gc.collect()
