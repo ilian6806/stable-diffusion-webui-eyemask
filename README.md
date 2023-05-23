@@ -49,6 +49,7 @@ Use *Install from URL* option with this repo url.
 - cmake
 
 All requirements will be installed on first use.
+You may need to install [cmake](https://cmake.org/download/) manually.
 
 ### Examples
 <img width="1024" src="https://raw.githubusercontent.com/ilian6806/stable-diffusion-webui-eyemask/master/static/images/examples.jpg" alt="">
