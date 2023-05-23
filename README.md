@@ -50,14 +50,15 @@ Use *Install from URL* option with this repo url.
 
 All requirements will be installed on first use.
 
+### Examples
+<img width="1024" src="https://raw.githubusercontent.com/ilian6806/stable-diffusion-webui-eyemask/master/static/images/examples.jpg" alt="">
+
 ### Mask types
 
 1. Eyes dlib
 2. Face dlib
 3. Face depthmask
 4. Body depthmask
-
-### Examples
 
 <img width="1024" src="https://raw.githubusercontent.com/ilian6806/stable-diffusion-webui-eyemask/master/static/images/mask-types.jpg" alt="">
 
