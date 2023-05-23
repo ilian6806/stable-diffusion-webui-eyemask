@@ -49,6 +49,7 @@ Use *Install from URL* option with this repo url.
 - cmake
 
 All requirements will be installed on first use.
+You may need to install [cmake](https://cmake.org/download/) manually.
 
 ### Mask types
 
