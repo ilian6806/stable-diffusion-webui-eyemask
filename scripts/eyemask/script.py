@@ -212,15 +212,21 @@ class EyeMasksCore():
                 updated_info = self.update_info(initial_info, em_params)
 
                 output_images.append(processed.images[0])
-                p.all_seeds.append(start_seed)
-                p.all_prompts.append(save_prompt)
-                p.infotexts.append(updated_info)
+                try:
+                    p.all_seeds.append(start_seed)
+                    p.all_prompts.append(save_prompt)
+                    p.infotexts.append(updated_info)
+                except Exception as e:
+                    pass
 
                 if em_include_mask and (n == iterations - 1 or (is_txt2img and em_redraw_original)):
                     output_images.append(mask)
-                    p.all_seeds.append(start_seed)
-                    p.all_prompts.append(mask_prompt)
-                    p.infotexts.append(updated_info)
+                    try:
+                        p.all_seeds.append(start_seed)
+                        p.all_prompts.append(mask_prompt)
+                        p.infotexts.append(updated_info)
+                    except Exception as e:
+                        pass
 
                 shared.state.current_image = processed.images[0]
 

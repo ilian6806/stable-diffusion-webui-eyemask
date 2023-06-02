@@ -193,15 +193,21 @@ class EyeMasksEmbeddedCore(EyeMasksCore):
                     updated_info = self.update_info(initial_info, em_params)
 
                     processed.images.append(processed_em.images[0])
-                    processed.all_seeds.append(start_seed)
-                    processed.all_prompts.append(save_prompt)
-                    processed.infotexts.append(updated_info)
+                    try:
+                        processed.all_seeds.append(start_seed)
+                        processed.all_prompts.append(save_prompt)
+                        processed.infotexts.append(updated_info)
+                    except Exception as e:
+                        pass
 
                     if em_include_mask and (n == iterations - 1):
                         processed.images.append(mask)
-                        processed.all_seeds.append(start_seed)
-                        processed.all_prompts.append(mask_prompt)
-                        processed.infotexts.append(updated_info)
+                        try:
+                            processed.all_seeds.append(start_seed)
+                            processed.all_prompts.append(mask_prompt)
+                            processed.infotexts.append(updated_info)
+                        except Exception as e:
+                            pass
 
                     shared.state.current_image = processed_em.images[0]
 
