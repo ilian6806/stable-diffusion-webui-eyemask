@@ -40,8 +40,8 @@ def list_models(model_path):
 python = sys.executable
 
 if include_mmdet:
-    run(f'"{python}" -m pip install lightning-utilities==0.4.0', desc=None, errdesc=f"Couldn't install lightning-utilities")
-    run(f'"{python}" -m pip install pytorch-lightning==1.7.6', desc=None, errdesc=f"Couldn't install pytorch-lightning")
+    run(f'"{python}" -m pip install lightning-utilities==0.11.2', desc=None, errdesc=f"Couldn't install lightning-utilities")
+    run(f'"{python}" -m pip install pytorch-lightning==2.2.4', desc=None, errdesc=f"Couldn't install pytorch-lightning")
 
 if not is_installed("cmake"):
     run(f'"{python}" -m pip install cmake', desc="Installing cmake", errdesc="Couldn't install cmake")
