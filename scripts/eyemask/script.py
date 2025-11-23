@@ -4,7 +4,7 @@ import re
 import modules.shared as shared
 from modules import devices, images
 from modules.processing import fix_seed, process_images, Processed, StableDiffusionProcessingTxt2Img, StableDiffusionProcessingImg2Img
-from . import mask_generator, utils, widlcards
+from . import mask_generator, utils, wildcards
 from .state import SharedSettingsContext
 
 
@@ -82,8 +82,8 @@ class EyeMasksCore():
         is_txt2img = isinstance(p, StableDiffusionProcessingTxt2Img)
         is_img2img = not is_txt2img
 
-        wildcards_generator_original = widlcards.WildcardsGenerator()
-        wildcards_generator_mask = widlcards.WildcardsGenerator()
+        wildcards_generator_original = wildcards.WildcardsGenerator()
+        wildcards_generator_mask = wildcards.WildcardsGenerator()
 
         if (is_img2img):
             orig_image = p.init_images[0]

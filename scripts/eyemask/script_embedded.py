@@ -3,7 +3,7 @@ import gc
 import modules.shared as shared
 from modules import devices, images
 from modules.processing import fix_seed, process_images, StableDiffusionProcessingTxt2Img, StableDiffusionProcessingImg2Img
-from . import widlcards
+from . import wildcards
 from .state import SharedSettingsContext
 
 from .script import EyeMasksCore
@@ -70,8 +70,8 @@ class EyeMasksEmbeddedCore(EyeMasksCore):
 
         is_txt2img = isinstance(p, StableDiffusionProcessingTxt2Img)
 
-        wildcards_generator_original = widlcards.WildcardsGenerator()
-        wildcards_generator_mask = widlcards.WildcardsGenerator()
+        wildcards_generator_original = wildcards.WildcardsGenerator()
+        wildcards_generator_mask = wildcards.WildcardsGenerator()
 
         p_em = StableDiffusionProcessingImg2Img(
             init_images=[processed.images[0]],
