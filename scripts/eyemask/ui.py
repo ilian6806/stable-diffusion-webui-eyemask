@@ -5,7 +5,7 @@ import gradio as gr
 import modules.sd_models
 from modules.ui_components import ToolButton
 
-from . import constants, script, script_embedded, utils, widlcards, state, mask_generator
+from . import constants, script, script_embedded, utils, wildcards, state, mask_generator
 from modules import shared
 
 
@@ -22,7 +22,7 @@ class EyeMaskUI():
         # reimport all dynamic packs
         importlib.reload(utils)
         importlib.reload(state)
-        importlib.reload(widlcards)
+        importlib.reload(wildcards)
         importlib.reload(mask_generator)
         # instantiate again core logic
         if self.is_embedded:

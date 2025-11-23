@@ -32,8 +32,6 @@ class SimpleDepthMapGenerator(object):
             model_dir = "./models/midas"
             # create path to model if not present
             os.makedirs(model_dir, exist_ok=True)
-            # print("Loading midas model weights ..")
-            device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
             #"dpt_large"
             if model_type == 0:
